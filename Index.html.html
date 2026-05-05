@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saee Panajkar | Professional Portfolio</title>
+
+    <!-- Modern Font: Inter & Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Linking External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Functional Navigation -->
+    <nav>
+        <a href="#" class="logo">SP.</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Professional Hero Section with Photo Space -->
+    <section class="hero">
+        <div class="hero-content reveal">
+            <h1>Saee Panajkar</h1>
+            <p class="mit-subtitle">MIT Academy of Engineering (MITAOE)</p>
+            <h2>CSE Student | Tech Enthusiast</h2>
+            <p>I build and develop technical and practical knowledge to become a skilled professional in the IT industry. Passionate about coding and animations.</p>
+        </div>
+
+        <div class="hero-image-container reveal" style="transition-delay: 0.2s;">
+            <!-- PHOTO SPACE -->
+            <div class="profile-photo">
+                <i class="fa-solid fa-user"></i>
+                <img id="profileImage" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Saee Panajkar">
+
+                <!-- Hover Upload Overlay -->
+                <label for="photoUpload" class="photo-upload-overlay" title="Click to upload a new photo">
+                    <i class="fa-solid fa-camera"></i> Change Photo
+                </label>
+                <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Education Section -->
+    <section id="about">
+        <div class="grid-container">
+            <div class="reveal">
+                <h2 class="section-title">About Me</h2>
+                <div class="card">
+                    <p>Hello, I am Saee Nilesh Panajkar, a First-year CSE student at MIT Academy of Engineering. I have deep interest in coding, technical knowledge, and mathematical animations.</p>
+                    <br>
+                    <p>I thrive on learning new technologies and solving complex problems. My goal is to evolve into a skilled professional in the tech industry through continuous practice and innovation.</p>
+                </div>
+            </div>
+
+            <div class="reveal" style="transition-delay: 0.2s;">
+                <h2 class="section-title">Education</h2>
+                <div class="card" style="border-left: 4px solid var(--primary);">
+                    <p style="color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase;">Currently Pursuing</p>
+                    <h3 style="margin-bottom: 0.5rem;">B.Tech in Computer Science Engineering</h3>
+                    <p><i class="fa-solid fa-building-columns"></i> MITAOE, Alandi, Pune</p>
+                    <p>First Year Student</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Objective -->
+    <section style="background-color: var(--card-bg);">
+        <h2 class="section-title reveal">Career Objective</h2>
+        <div class="reveal" style="max-width: 800px; border-left: 4px solid var(--primary); padding-left: 20px;">
+            <p style="font-size: 1.15rem; color: var(--text-muted); font-style: italic;">
+                "To build and develop my technical and practical knowledge, along with problem-solving skills, to establish myself as a skilled professional in the tech and IT industry. I aim to leverage my interest in coding and animations to create impactful digital experiences."
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section with Circular Interactive Elements -->
+    <section id="skills">
+        <h2 class="section-title reveal" style="display: block; text-align: center;">My Skills</h2>
+
+        <p class="reveal" style="text-align: center; margin-bottom: 3rem; color: var(--primary-light); font-size: 1.05rem;">
+            <i class="fa-solid fa-hand-pointer"></i> Click on any circle to reveal my proficiency!
+        </p>
+
+        <div class="skills-container reveal">
+            <div class="skill-circle" onclick="this.classList.toggle('active');">
+                <div class="skill-inner skill-front"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                <div class="skill-inner skill-back"><span class="percent-number">85%</span><span class="percent-label">Proficiency</span></div>
+            </div>
+            <div class="skill-circle" onclick="this.classList.toggle('active');">
+                <div class="skill-inner skill-front"><i class="fa-solid fa-code"></i><span>C Language</span></div>
+                <div class="skill-inner skill-back"><span class="percent-number">80%</span><span class="percent-label">Proficiency</span></div>
+            </div>
+            <div class="skill-circle" onclick="this.classList.toggle('active');">
+                <div class="skill-inner skill-front"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+                <div class="skill-inner skill-back"><span class="percent-number">75%</span><span class="percent-label">Proficiency</span></div>
+            </div>
+            <div class="skill-circle" onclick="this.classList.toggle('active');">
+                <div class="skill-inner skill-front"><i class="fa-solid fa-chart-simple"></i><span>Tableau</span></div>
+                <div class="skill-inner skill-back"><span class="percent-number">70%</span><span class="percent-label">Proficiency</span></div>
+            </div>
+            <div class="skill-circle" onclick="this.classList.toggle('active');">
+                <div class="skill-inner skill-front"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Manim</span></div>
+                <div class="skill-inner skill-back"><span class="percent-number">80%</span><span class="percent-label">Animations</span></div>
+            </div>
+            <div class="skill-circle" onclick="this.classList.toggle('active');">
+                <div class="skill-inner skill-front"><i class="fa-solid fa-brain"></i><span>Problem Solving</span></div>
+                <div class="skill-inner skill-back"><span class="percent-number">85%</span><span class="percent-label">Skills</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Stacked Cards Design) -->
+    <section id="projects" style="background-color: var(--card-bg);">
+        <h2 class="section-title reveal" style="display: block; text-align: center; width: 100%;">Featured Projects</h2>
+
+        <p class="reveal" style="text-align: center; margin-bottom: 2rem; color: var(--primary-light);">
+            <i class="fa-solid fa-layer-group"></i> Click the top card to push it back and view the next project!
+        </p>
+
+        <!-- Stacked Card Container -->
+        <div class="stack-container reveal" id="projectStack">
+
+            <div class="stacked-card">
+                <i class="fa-solid fa-film"></i>
+                <h3>Manim Animations</h3>
+                <p>Created high-quality mathematical animations using the Manim Python library to explain complex concepts.</p>
+            </div>
+
+            <div class="stacked-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Data Visualisation</h3>
+                <p>Designed interactive and insightful dashboards using Tableau to represent large datasets effectively.</p>
+            </div>
+
+            <div class="stacked-card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Coding Projects</h3>
+                <p>Developed various logic-based programs and applications using C and Python.</p>
+            </div>
+
+            <div class="stacked-card">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Web Development</h3>
+                <p>Built responsive and modern static websites using HTML and CSS fundamentals.</p>
+            </div>
+
+            <div class="stacked-card">
+                <i class="fa-solid fa-cloud"></i>
+                <h3>Google Cloud Jams</h3>
+                <p>Participated in cloud study jams to understand infrastructure, AI, and cloud services.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Personal Details Section -->
+    <section id="contact">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+            <h2 class="section-title reveal" style="margin-bottom: 3rem;">Personal Details</h2>
+
+            <div class="card reveal" style="max-width: 600px; width: 100%; background: var(--bg-color);">
+                <ul class="details-list" style="text-align: left; display: inline-block; width: 100%;">
+                    <li><i class="fa-solid fa-user"></i> <strong>Name:</strong> <span>Saee Panajkar</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> <span>Pune, Maharashtra</span></li>
+                    <li><i class="fa-solid fa-graduation-cap"></i> <strong>Course:</strong> <span>B.Tech (CSE)</span></li>
+                    <li><i class="fa-solid fa-language"></i> <strong>Languages:</strong> <span>English, Hindi, Marathi</span></li>
+                    <li style="border-bottom: none;"><i class="fa-solid fa-heart"></i> <strong>Interests:</strong> <span>Technology, AI, Animations, Data Analysis</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Saee Panajkar | Designed with HTML & CSS</p>
+    </footer>
+
+    <!-- Script for Scroll Animations and Project Stack Logic -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+                reveals.forEach(reveal => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll();
+
+            const photoUpload = document.getElementById('photoUpload');
+            const profileImage = document.getElementById('profileImage');
+            if (photoUpload && profileImage) {
+                photoUpload.addEventListener('change', function (event) {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            profileImage.src = e.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
+
+            const stackContainer = document.getElementById('projectStack');
+            if (stackContainer) {
+                let isAnimating = false;
+                const updateCards = () => {
+                    const currentCards = Array.from(stackContainer.querySelectorAll('.stacked-card'));
+                    currentCards.forEach((card, index) => {
+                        if (!card.classList.contains('card-slide-out')) {
+                            card.className = 'stacked-card';
+                            if (index === 0) card.classList.add('card-1');
+                            else if (index === 1) card.classList.add('card-2');
+                            else if (index === 2) card.classList.add('card-3');
+                            else card.classList.add('card-hidden');
+                        }
+                    });
+                };
+                updateCards();
+                stackContainer.addEventListener('click', () => {
+                    if (isAnimating) return;
+                    isAnimating = true;
+                    const currentCards = Array.from(stackContainer.querySelectorAll('.stacked-card'));
+                    const topCard = currentCards[0];
+                    topCard.classList.add('card-slide-out');
+                    const remainingCards = currentCards.slice(1);
+                    remainingCards.forEach((card, i) => {
+                        card.className = 'stacked-card';
+                        if (i === 0) card.classList.add('card-1');
+                        else if (i === 1) card.classList.add('card-2');
+                        else if (i === 2) card.classList.add('card-3');
+                        else card.classList.add('card-hidden');
+                    });
+                    setTimeout(() => {
+                        topCard.classList.remove('card-slide-out');
+                        stackContainer.appendChild(topCard);
+                        updateCards();
+                        isAnimating = false;
+                    }, 400);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,495 @@
+:root {
+    /* Stunning Dark Mode Neon Purple/Pink Theme */
+    --primary: #c084fc;
+    /* Bright Purple */
+    --primary-light: #f472b6;
+    /* Pink */
+    --bg-color: #09090b;
+    /* Very dark zinc */
+    --text-main: #fafafa;
+    /* Off white */
+    --text-muted: #a1a1aa;
+    /* Muted zinc */
+    --card-bg: #18181b;
+    /* Dark zinc */
+    --border-color: rgba(255, 255, 255, 0.08);
+    --transition: all 0.4s ease;
+    --gradient: linear-gradient(135deg, var(--primary), var(--primary-light));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.percent-number {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(9, 9, 11, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1.2rem 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: var(--primary-light);
+}
+
+/* Hero / Header Section */
+.hero {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at top right, rgba(192, 132, 252, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at bottom left, rgba(244, 114, 182, 0.15) 0%, transparent 50%);
+    padding: 8rem 10% 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap-reverse;
+    position: relative;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.mit-subtitle {
+    font-size: 1.1rem;
+    color: var(--primary-light);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+}
+
+.hero-image-container {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Photo Space Styling */
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid var(--border-color);
+    background: var(--card-bg);
+    box-shadow: 0 0 40px rgba(192, 132, 252, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-photo>i {
+    font-size: 6rem;
+    opacity: 0.5;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.photo-upload-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transform: translateY(100%);
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.profile-photo:hover .photo-upload-overlay {
+    transform: translateY(0);
+}
+
+/* Sections General */
+section {
+    padding: 5rem 10%;
+}
+
+.section-title {
+    color: var(--text-main);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+/* Cards Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(192, 132, 252, 0.4);
+    box-shadow: 0 15px 40px rgba(192, 132, 252, 0.15);
+}
+
+.card h3 {
+    color: var(--text-main);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+/* Circular Skills Styles */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-circle:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(192, 132, 252, 0.2);
+}
+
+.skill-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    text-align: center;
+    padding: 1rem;
+}
+
+.skill-front {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-front i {
+    font-size: 2.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.8rem;
+}
+
+.skill-front span {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.skill-back {
+    opacity: 0;
+    transform: translateY(100%);
+    background: var(--gradient);
+    color: white;
+    border-radius: 50%;
+}
+
+.skill-back .percent-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+    color: white;
+}
+
+.skill-back .percent-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* Click Active State */
+.skill-circle.active .skill-front {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.skill-circle.active .skill-back {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Project Stack Layout */
+.stack-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    margin: 2rem auto;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.stacked-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-color);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stacked-card i {
+    font-size: 3rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+/* JavaScript controlled stack classes */
+.card-1 {
+    transform: translateY(0) scale(1);
+    z-index: 3;
+    opacity: 1;
+}
+
+.card-2 {
+    transform: translateY(20px) scale(0.95);
+    z-index: 2;
+    opacity: 0.6;
+}
+
+.card-3 {
+    transform: translateY(40px) scale(0.9);
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.card-hidden {
+    transform: translateY(60px) scale(0.85);
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-slide-out {
+    transform: translateX(-120%) scale(0.9) rotate(-8deg) !important;
+    opacity: 0 !important;
+    z-index: 4 !important;
+}
+
+/* Personal Details */
+.details-list {
+    list-style: none;
+}
+
+.details-list li {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.5rem;
+}
+
+.details-list i {
+    color: var(--primary);
+    margin-right: 15px;
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+}
+
+.details-list strong {
+    display: inline-block;
+    width: 110px;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* Scroll Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background: #000;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 2.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding: 6rem 5%;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    section {
+        padding: 4rem 5%;
+    }
+
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .stack-container {
+        height: 380px;
+    }
+}
